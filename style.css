@@ -1,0 +1,302 @@
+/* === General Page Styles === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFD93D;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Header and Navigation Bar === */
+header {
+    background-color: #FF4C4C;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 12px;
+    border: 2px solid white;
+    border-radius: 8px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #FF4C4C;
+}
+
+.active {
+    background-color: white;
+    color: #FF4C4C;
+}
+
+/* === Login Box === */
+.login-container {
+    background-color: white;
+    width: 320px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #FF4C4C;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.login-container input {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #E53E3E;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    background-color: #FF4C4C;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* === REGISTRATION PAGE === */
+.register-container {
+    background-color: white;
+    width: 340px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.register-container h2 {
+    color: #FF4C4C;
+}
+
+.register-container label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.register-container input {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.register-container button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.register-container button:hover {
+    background-color: #E53E3E;
+}
+/* === PRODUCTS PAGE === */
+.product-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-section h2 {
+    color: #FF4C4C;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    width: 220px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-weight: bold;
+    color: #FF4C4C;
+}
+
+.product-card button {
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #E53E3E;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.cart-container {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.totals {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.cart-buttons {
+    margin-top: 20px;
+}
+
+.cart-buttons button {
+    padding: 12px;
+    margin-right: 10px;
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.checkout-container {
+    width: 80%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.summary-box {
+    margin-bottom: 25px;
+    background: #fff7f7;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.summary-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.checkout-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.checkout-buttons button {
+    padding: 10px;
+    flex: 1;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
