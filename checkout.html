@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnackVerse | Checkout</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">  <!-- FIXED -->
 </head>
 <body>
 
 <header>
     <h1>SnackVerse</h1>
     <nav>
-        
-        <a href="index.html" class="active">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="register.html">Registration</a>
         <a href="login.html">Login</a>
         <a href="products.html">Products</a>
         <a href="cart.html">Cart</a>
+        <a href="checkout.html" class="active">Checkout</a> <!-- FIXED -->
     </nav>
 </header>
 
 <main class="checkout-container">
     <h2>Checkout</h2>
 
-   
     <div id="summaryBox" class="summary-box"></div>
 
-   
     <form id="checkoutForm">
         <h3>Shipping Details</h3>
 
@@ -57,7 +55,7 @@
             <button type="button" onclick="confirmOrder()">Confirm</button>
             <button type="button" onclick="cancelOrder()">Cancel</button>
             <button type="button" onclick="clearCart()">Clear All</button>
-            <button type="button" onclick="window.close()">Close</button>
+            <button type="button" onclick="history.back()">Close</button> <!-- FIXED -->
         </div>
     </form>
 </main>
@@ -66,7 +64,6 @@
     <p>&copy; 2025 SnackVerse. All Rights Reserved.</p>
 </footer>
 
-<script src="checkout.js"></script>
+<script src="../checkout.js"></script> <!-- FIXED -->
 </body>
 </html>
-
