@@ -41,3 +41,4 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     window.location.href = "login.html"; 
 });
 
+
