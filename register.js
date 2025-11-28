@@ -38,11 +38,13 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         alert("Passwords do not match. Please try again.");
         return;
     }
-
+    let RegistrationData=JSON.parse(localStorage.setItem("RegistrationData")||[];
+    RegistrationData.push();
     // Success message
     alert("Registration successful! (Demo only)");
     window.location.href = "login.html"; 
 });
+
 
 
 
