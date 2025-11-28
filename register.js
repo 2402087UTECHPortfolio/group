@@ -4,7 +4,8 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     event.preventDefault(); 
 
     // Get user input
-    let fullname = document.getElementById("fullname").value.trim();
+    let firstname=document.getElementById("firstname").value.trim();
+    let lastname=document.getElementById("lastname").value.trim();
     let email = document.getElementById("email").value.trim();
     let username = document.getElementById("username").value.trim();
     let password = document.getElementById("password").value.trim();
@@ -39,3 +40,4 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     alert("Registration successful! (Demo only)");
     window.location.href = "login.html"; 
 });
+
