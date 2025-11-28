@@ -12,7 +12,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     let confirm = document.getElementById("confirm").value.trim();
 
     // Basic validation
-    if(fullname === "" || email === "" || username === "" || password === "" || confirm === ""){
+    if(firstname === "" || lastname===""| email === "" || username === "" || password === "" || confirm === ""){
         alert("All fields are required.");
         return;
     }
@@ -25,8 +25,8 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     }
 
     // Check password length
-    if(password.length < 6){
-        alert("Password must be at least 6 characters long.");
+    if(password.length < 8){
+        alert("Password must be at least 8 characters long.");
         return;
     }
 
@@ -40,5 +40,6 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     alert("Registration successful! (Demo only)");
     window.location.href = "login.html"; 
 });
+
 
 
