@@ -6,13 +6,16 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     // Get user input
     let firstname=document.getElementById("firstname").value.trim();
     let lastname=document.getElementById("lastname").value.trim();
+    let dateofbirth= document.getElementById("dob").value;
+    let gender = document.getElementById("gender").value;
+    let phone number = document.getElementById("tel").value;
     let email = document.getElementById("email").value.trim();
-    let username = document.getElementById("username").value.trim();
+    let trn = document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
     let confirm = document.getElementById("confirm").value.trim();
 
     // Basic validation
-    if(firstname === "" || lastname===""| email === "" || username === "" || password === "" || confirm === ""){
+    if(firstname === "" || lastname===""| dateofbirth === "" || gender===""| phone number===""| email===""|trn=== "" || password === "" || confirm === ""){
         alert("All fields are required.");
         return;
     }
@@ -40,6 +43,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     alert("Registration successful! (Demo only)");
     window.location.href = "login.html"; 
 });
+
 
 
 
