@@ -34,9 +34,9 @@ function loadSummary() {
 
 function convertImageName(name) {
     name = name.toLowerCase();
-    if (name.includes("kitkat")) return "japanese-kitkat.png";
-    if (name.includes("chips")) return "mexican-chips.png";
-    if (name.includes("candy")) return "korean-candy.png";
+    if (name.includes("KitKat")) return "KitKat.png";
+    if (name.includes("Chips")) return "Mexican-Chips.png";
+    if (name.includes("cookies")) return "Korean-cookies.png";
     if (name.includes("cookies")) return "usa-cookies.png";
     return "snacks.jpg";
 }
@@ -51,7 +51,7 @@ function confirmOrder() {
         items: cart
     };
 
-    localStorage.setItem("lastOrder", JSON.stringify(order));
+    localStorage.setItem("Invoice", JSON.stringify(order));
     localStorage.removeItem("cart");
 
     window.location.href = "receipt.html";
