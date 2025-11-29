@@ -1,5 +1,3 @@
-
-
 document.getElementById("registerForm").addEventListener("submit", function(event){
     event.preventDefault(); 
 
@@ -8,22 +6,41 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     let lastname=document.getElementById("lastname").value.trim();
     let dateofbirth= document.getElementById("dob").value;
     let gender = document.getElementById("gender").value;
-    let phonenumber = document.getElementById("tel").value;
+    let phonenumber = document.getElementById("tele").value;
     let email = document.getElementById("email").value.trim();
     let trn = document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
     let confirm = document.getElementById("confirm").value.trim();
+    let dateofregistration=new Date();
 
     // Basic validation
-    if(firstname === "" || lastname===""| dateofbirth === "" || gender===""| phone number===""| email===""|trn=== "" || password === "" || confirm === ""){
+    if(firstname === "" || lastname===""| dateofbirth === "" || gender===""| phonenumber===""| email===""|trn=== "" || password === "" || confirm === ""){
         alert("All fields are required.");
         return;
     }
-
+    //Check age requirement
+    let today = new Date();
+    let dob = new Date(dateofbirth);
+    let age=today.getFullYear() - dob.getFullYear();
+    let m = today.getMonth() - dob.getMonth();
+    let d= today.getDate() - dob.getDate();
+    if (m < 0 || (m === 0 && d < 0)) {
+        age--;
+    }
+    if(age < 18){
+        alert("You must be at least 18 years old to register.");
+        return;
+    }
     // Validate email format
     let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if(!email.match(emailPattern)){
         alert("Please enter a valid email address.");
+        return;
+    }
+    // Validate TRN format
+    let trnPattern=/^\d{3}-\d{3}-\d{3}$/;
+    if(!trn.match(trnPattern)){
+        alert("TRN must be a 9-digit number.");
         return;
     }
 
@@ -38,12 +55,31 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         alert("Passwords do not match. Please try again.");
         return;
     }
-    let RegistrationData=JSON.parse(localStorage.setItem("RegistrationData")||[];
-    RegistrationData.push({firstname,lastname,dateofbirth,gender,phonenumber,email,trn,password});
-    // Success message
-    alert("Registration successful! (Demo only)");
-    window.location.href = "login.html"; 
+    // Store registration data
+    let RegistrationData=JSON.parse(localStorage.getItem("RegistrationData")) || [];
+    if (RegistrationData.some(u=>u.trn===trn))
+        {
+            alert("TRN already registered.");
+            return;
+        }
+        RegistrationData.push({firstname,lastname,dateofbirth,gender,phonenumber,email,trn,password,dateofregistration});
+        try
+        {
+            localStorage.setItem("RegistrationData",JSON.stringify(RegistrationData));
+            alert("Registration successful!");
+            window.location.href="login.html";
+            return;
+        }
+        catch(e)
+        {
+          alert("Error saving data. Please try again.");
+          return;  
+        } 
 });
+
+function Cancel() {
+    RegistrationData.pop();
+}
 
 
 
