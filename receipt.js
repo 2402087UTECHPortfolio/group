@@ -1,5 +1,5 @@
 function loadReceipt() {
-    let order = JSON.parse(localStorage.getItem("lastOrder"));
+    let order = JSON.parse(localStorage.getItem("Invoice"));
 
     
     if (!order) {
