@@ -1,18 +1,20 @@
 // === LOGIN PAGE VALIDATION ===
+let attempts=0;
+
 document.getElementById("loginForm").addEventListener("submit", function(event){
     event.preventDefault(); 
  
     let trn= document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
-    let attempts=0;
 
     if(trn=== "" || password === ""){
         alert("Please enter both trn and password.");
     } else {
-        let RegistrationData=JSON.parse(localStorage.getItem("RegistrationData");
-        if (RegistrationData.some(u=>u.trn==trn && u=>u.password===password)
+        let RegistrationData=JSON.parse(localStorage.getItem("RegistrationData")) || [];
+        let user=RegistrationData.find(u=>u.trn==trn && u.password===password);
+        if(user)
         {
-             alert("Login successful! (Demo only)");
+             alert("Login successful!");
              window.location.href = "index.html";
         }
         else
@@ -22,10 +24,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
             if (attempts==3)
             {
                alert("Your account has been locked");
+               
             }
         }
         
     }
 });
+
 
 
