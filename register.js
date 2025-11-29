@@ -8,7 +8,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     let lastname=document.getElementById("lastname").value.trim();
     let dateofbirth= document.getElementById("dob").value;
     let gender = document.getElementById("gender").value;
-    let phone number = document.getElementById("tel").value;
+    let phonenumber = document.getElementById("tel").value;
     let email = document.getElementById("email").value.trim();
     let trn = document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
@@ -39,11 +39,12 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         return;
     }
     let RegistrationData=JSON.parse(localStorage.setItem("RegistrationData")||[];
-    RegistrationData.push();
+    RegistrationData.push({firstname,lastname,dateofbirth,gender,phonenumber,email,trn,password});
     // Success message
     alert("Registration successful! (Demo only)");
     window.location.href = "login.html"; 
 });
+
 
 
 
