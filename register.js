@@ -75,14 +75,26 @@ document.getElementById("registerForm").addEventListener("submit", function(even
           alert("Error saving data. Please try again.");
           return;  
         } 
+        
 });
-
-function Cancel() {
-    RegistrationData.pop();
-}
-
-
-
-
-
-
+document.getElementById("cancel").addEventListener("click", function() {
+    let firstname=document.getElementById("firstname").value.trim();
+    let lastname=document.getElementById("lastname").value.trim();
+    let dateofbirth= document.getElementById("dob").value;
+    let gender = document.getElementById("gender").value;
+    let phonenumber = document.getElementById("tele").value;
+    let email = document.getElementById("email").value.trim();
+    let trn = document.getElementById("trn").value;
+    let password = document.getElementById("password").value.trim();
+    let confirm = document.getElementById("confirm").value.trim();
+    
+    if(firstname === "" || lastname===""|| dateofbirth === "" || gender===""|| phonenumber===""|| email===""||trn=== "" || password === "" || confirm === "")
+    {
+        alert("Please enter data to clear");
+    }
+    else
+    {
+        document.getElementById("registerForm").reset();
+        alert("Form cleared");
+    }
+});
