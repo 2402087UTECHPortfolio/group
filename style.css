@@ -40,7 +40,7 @@ nav a:hover {
 }
 
 /* === Login Box === */
-.login-container {
+.login-container, .reset-container {
     background-color: white;
     width: 320px;
     margin: 60px auto;
@@ -54,14 +54,14 @@ nav a:hover {
     color: #FF4C4C;
 }
 
-.login-container label {
+.login-container label, .reset-container label {
     display: block;
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
 }
 
-.login-container input {
+.login-container input, .reset-container input {
     width: 95%;
     padding: 8px;
     margin-top: 5px;
@@ -69,7 +69,7 @@ nav a:hover {
     border-radius: 6px;
 }
 
-.login-container button {
+.login-container button, .reset-container button {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
