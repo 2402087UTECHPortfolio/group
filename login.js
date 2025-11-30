@@ -15,7 +15,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
         if(user)
         {
              alert("Login successful!");
-             window.location.href = "index.html";
+             window.location.href = "Products.html";
         }
         else
         {
@@ -28,6 +28,19 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
             }
         }
         
+    }
+});
+document.getElementById("cancel").addEventListener("click", function() {
+    let trn = document.getElementById("trn").value;
+    let password = document.getElementById("password").value.trim();   
+    if(trn=== "" || password === "" )
+    {
+        alert("Please enter data to clear");
+    }
+    else
+    {
+        document.getElementById("loginForm").reset();
+        alert("Form cleared");
     }
 });
 
