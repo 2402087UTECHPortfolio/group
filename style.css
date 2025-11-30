@@ -117,7 +117,7 @@ footer {
     font-weight: bold;
 }
 
-.register-container input {
+.register-container input, .register-container select {
     width: 95%;
     padding: 8px;
     margin-top: 5px;
