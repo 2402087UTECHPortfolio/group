@@ -1,4 +1,7 @@
-// === LOGIN PAGE VALIDATION ===
+//Question 1b User Authentication(localStorage)
+//Login Page
+//Validating Login Page 
+//Daynea Chambers 2400660
 let attempts=0;
 
 document.getElementById("loginForm").addEventListener("submit", function(event){
@@ -6,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
  
     let trn= document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
-
+    //Validating fields
     if(trn=== "" || password === ""){
         alert("Please enter both trn and password.");
     } else {
@@ -30,6 +33,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
         
     }
 });
+//Reset form ddata
 document.getElementById("cancel").addEventListener("click", function() {
     let trn = document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();   
@@ -43,6 +47,7 @@ document.getElementById("cancel").addEventListener("click", function() {
         alert("Form cleared");
     }
 });
+
 
 
 
