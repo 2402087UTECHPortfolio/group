@@ -1,3 +1,6 @@
+//Question 1-User Authentication(LocalStorage)
+//Validating user input on Registration Page
+//Daynea Chambers 2400660
 document.getElementById("registerForm").addEventListener("submit", function(event){
     event.preventDefault(); 
 
@@ -77,6 +80,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         } 
         
 });
+//Reset form fields
 document.getElementById("cancel").addEventListener("click", function() {
     let firstname=document.getElementById("firstname").value.trim();
     let lastname=document.getElementById("lastname").value.trim();
@@ -98,3 +102,4 @@ document.getElementById("cancel").addEventListener("click", function() {
         alert("Form cleared");
     }
 });
+
