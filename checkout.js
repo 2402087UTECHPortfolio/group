@@ -42,12 +42,16 @@ function convertImageName(name) {
 }
 
 function confirmOrder() {
+
+    const storedUser = localStorage.getItem('RegistrationData'),
+        
     let order = {
         orderID: "SV" + Math.floor(Math.random() * 90000 + 10000),
         name: document.getElementById("custName").value,
         address: document.getElementById("custAddress").value,
         cardName: document.getElementById("cardName").value,
         cardNumber: document.getElementById("cardNumber").value,
+        storedUser,
         items: cart
     };
 
@@ -68,3 +72,4 @@ function clearCart() {
 }
 
 window.onload = loadSummary;
+
