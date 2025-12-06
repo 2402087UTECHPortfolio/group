@@ -63,7 +63,7 @@ function ShowUserFrequency() {
 // -------- Invoice Search by TRN --------
 function ShowInvoices() {
     let trn = document.getElementById("trnSearch").value.trim();
-    let invoices = JSON.parse(localStorage.getItem("AllInvoices")) || [];
+    let invoices = JSON.parse(localStorage.getItem("Invoice")) || [];
 
     let filtered = invoices;
     if (trn) filtered = invoices.filter(inv => inv.trn === trn);
@@ -91,4 +91,5 @@ function ShowInvoices() {
 }
 
 // Render all charts on page load
+
 window.onload = ShowUserFrequency;
